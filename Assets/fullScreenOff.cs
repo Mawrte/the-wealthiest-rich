@@ -12,27 +12,26 @@ public class fullScreenOff : MonoBehaviour {
     // Update is called once per frame
     uint exitCount = 0;
     void Update () {
-        //if (Input.GetKeyDown(KeyCode.Escape))
-        //    Application.Quit();
-
-        //////
-        ///
-
-        if (Input.GetKeyUp(KeyCode.Escape))
-        {
-        
-            exitCount++;
-            if (!IsInvoking("disableDoubleClick"))
-                Invoke("disableDoubleClick", 0.3f);
-        }
-
-
-        if (exitCount == 2)
-        {
-            CancelInvoke("disableDoubleClick");
+        if (Input.GetKeyDown(KeyCode.Escape))
             Application.Quit();
-        }
         
+        //////////////
+
+        //if (Input.GetKeyUp(KeyCode.Escape))
+        //{
+
+        //    exitCount++;
+        //    if (!IsInvoking("disableDoubleClick"))
+        //        Invoke("disableDoubleClick", 0.3f);
+        //}
+
+
+        //if (exitCount == 2)
+        //{
+        //    CancelInvoke("disableDoubleClick");
+        //    Application.Quit();
+        //}
+
 
 
         ////////
